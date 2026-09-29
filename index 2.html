@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#9b76ad">
+<title>Haneen Tamer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"DM Sans",Arial,sans-serif}
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:#fff;
+  background:
+    radial-gradient(ellipse at 8% 30%,rgba(62,39,72,.42),transparent 20%),
+    radial-gradient(ellipse at 100% 65%,rgba(54,32,65,.30),transparent 23%),
+    radial-gradient(circle at 50% 15%,rgba(255,226,255,.20),transparent 25%),
+    linear-gradient(145deg,#c3a1cf 0%,#a47cb3 43%,#7b5b84 100%);
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.42;
+  background:
+    radial-gradient(ellipse at 0% 20%,transparent 0 11%,rgba(52,35,58,.35) 11.5% 12%,transparent 13%),
+    radial-gradient(ellipse at 100% 80%,transparent 0 10%,rgba(52,35,58,.25) 10.5% 11.5%,transparent 12%);
+  filter:blur(12px);
+}
+.page{width:min(470px,100%);min-height:100vh;margin:auto;padding:28px 18px 28px;position:relative}
+.decor{position:absolute;pointer-events:none;color:#f7ddff;text-shadow:0 0 16px rgba(255,255,255,.55);z-index:1}
+.spark{font-size:26px}.heart{font-size:31px}.butterfly{font-size:34px}
+.d1{top:150px;left:22px}.d2{top:365px;right:18px}.d3{top:585px;left:34px}
+.d4{bottom:145px;right:25px}
+.b1{top:115px;right:45px}.b2{bottom:135px;left:23px}
+.profile{text-align:center;position:relative;z-index:3;padding-top:34px}
+.portrait{
+  width:132px;height:132px;margin:0 auto 13px;border-radius:50%;
+  padding:5px;
+  background:linear-gradient(145deg,#fff0ff,#dcb9e9,#fff0ff);
+  box-shadow:0 0 0 6px rgba(255,230,255,.10),0 15px 40px rgba(54,28,65,.34);
+}
+.portrait svg{width:100%;height:100%;display:block;border-radius:50%;overflow:hidden}
+.name{
+  margin:0;
+  font-family:Caveat,cursive;
+  font-size:63px;
+  line-height:.95;
+  font-weight:500;
+  letter-spacing:.2px;
+  text-shadow:0 3px 16px rgba(63,33,72,.35);
+}
+.name-line{display:flex;align-items:center;justify-content:center;gap:12px;margin:8px auto 18px}
+.name-line:before,.name-line:after{content:"";height:2px;width:70px;background:rgba(255,230,255,.75);border-radius:99px}
+.name-line span{font-size:20px;color:#f7d9ff}
+.number{
+  font-size:21px;letter-spacing:1.2px;direction:ltr;
+  width:min(310px,94%);margin:auto;
+  padding:15px 22px;border:1px solid rgba(255,238,255,.6);
+  border-radius:999px;background:rgba(255,236,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 12px 28px rgba(62,32,72,.2);
+  backdrop-filter:blur(14px);
+}
+.actions{display:flex;gap:11px;width:min(350px,100%);margin:12px auto 0}
+.action{
+  flex:1;text-decoration:none;color:#fff;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  padding:12px;border-radius:999px;
+  border:1px solid rgba(255,238,255,.5);
+  background:rgba(255,236,255,.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 9px 20px rgba(61,32,70,.16);
+  backdrop-filter:blur(14px);
+  font-size:15px;font-weight:600;
+}
+.action svg{width:21px;height:21px}
+.links{display:grid;gap:15px;margin-top:25px;position:relative;z-index:3}
+.card{
+  min-height:92px;
+  display:grid;grid-template-columns:61px 1fr 42px;align-items:center;
+  padding:12px 14px;
+  text-decoration:none;color:#fff;text-align:left;
+  border:1px solid rgba(255,236,255,.58);
+  border-radius:27px;
+  background:linear-gradient(110deg,rgba(255,255,255,.20),rgba(255,255,255,.08));
+  box-shadow:0 13px 28px rgba(54,28,65,.22),inset 0 1px 0 rgba(255,255,255,.23);
+  backdrop-filter:blur(16px);
+}
+.logo{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;box-shadow:0 7px 16px rgba(42,20,49,.22)}
+.logo svg{width:34px;height:34px;display:block}
+.ig{background:linear-gradient(145deg,#7540a2,#dd428a 60%,#f5a53d)}
+.tt{background:#151118}
+.sc{background:#ffe047}
+.info{padding:0 11px;min-width:0}
+.platform{font-family:Caveat,cursive;font-size:31px;line-height:1}
+.handle{font-size:12px;opacity:.84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:7px;direction:ltr}
+.go{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,238,255,.19);border:1px solid rgba(255,238,255,.35);font-size:31px;font-weight:300}
+.footer{text-align:center;margin-top:28px;font-family:Caveat,cursive;font-size:27px;color:#f4d9fb}
+.footer:before,.footer:after{content:"—";margin:0 10px;opacity:.7}
+.footer-heart{display:block;font-family:Arial;font-size:21px;margin-top:3px}
+@media(max-width:380px){
+ .page{padding-left:13px;padding-right:13px}.name{font-size:56px}
+ .card{grid-template-columns:55px 1fr 39px}.logo{width:51px;height:51px}.platform{font-size:28px}
+ .handle{font-size:10px}.number{font-size:19px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <span class="decor heart d1">♡</span>
+  <span class="decor spark d2">✦</span>
+  <span class="decor spark d3">✦</span>
+  <span class="decor heart d4">♡</span>
+  <span class="decor butterfly b1">🦋</span>
+  <span class="decor butterfly b2">🦋</span>
+
+  <section class="profile">
+<h1 class="name">Haneen Tamer</h1>
+    <div class="name-line"><span>♡</span></div>
+
+    <div class="number">01112590136</div>
+
+    <div class="actions">
+      <a class="action" href="tel:01112590136">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6.8 3.2 9.3 2.5c.6-.2 1.2.1 1.5.7l1.1 2.6c.2.6.1 1.2-.4 1.6L9.8 8.7c1 2.2 2.7 3.9 4.9 4.9l1.3-1.7c.4-.5 1-.7 1.6-.4l2.6 1.1c.6.3.9.9.7 1.5l-.7 2.5c-.2.7-.8 1.1-1.5 1.1C11 17.7 6.3 13 6.3 7.3c0-.7.4-1.3 1.1-1.5l-.6-2.6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call
+      </a>
+      <a class="action" href="https://wa.me/201112590136" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20 11.4a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.4Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.1 8.2c.2-.4.4-.4.8-.4h.4c.2 0 .4.2.5.5l.7 1.7c.1.3 0 .5-.2.7l-.6.6c.5 1 1.3 1.8 2.3 2.3l.6-.6c.2-.2.5-.3.7-.2l1.7.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.5.3-1.1.4-1.7.2-2.1-.6-4.6-3.1-5.2-5.2-.2-.6-.1-1.2 0-1.8Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section class="links">
+    <a class="card" href="https://www.instagram.com/haneentamer_t?stkn=OTU3dXQ5cHlpemh6&utm_source=qr" target="_blank" rel="noopener">
+      <span class="logo ig">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#fff"/></svg>
+      </span>
+      <span class="info"><span class="platform">Instagram</span><span class="handle">@haneentamer_t</span></span>
+      <span class="go">›</span>
+    </a>
+
+    <a class="card" href="https://www.tiktok.com/@haneentamertame81?_r=1&_t=ZS-9A8grYvaT93" target="_blank" rel="noopener">
+      <span class="logo tt">
+        <svg viewBox="0 0 24 24"><path d="M14.2 4c.6 2.3 1.8 3.6 4.1 3.9v3a7.3 7.3 0 0 1-4.1-1.3v6.1a4.7 4.7 0 1 1-4.1-4.6v3a1.8 1.8 0 1 0 1.1 1.6V4h3Z" fill="#fff"/></svg>
+      </span>
+      <span class="info"><span class="platform">TikTok</span><span class="handle">@haneentamertame81</span></span>
+      <span class="go">›</span>
+    </a>
+
+    <a class="card" href="https://www.snapchat.com/add/haneen231560?share_id=2awZzpxXWZ0&locale=ar-AA" target="_blank" rel="noopener">
+      <span class="logo sc">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3.1c-3.1 0-5.5 2.3-5.5 5.7v2.3c0 .9-.4 1.6-1.2 2.1-.5.3-.3.9.2 1.2.8.3 1.7.4 2.3.9.5.4.7 1.1 1.2 1.5.7.4 1.5-.1 2.1.2.5.2.6 1.1 1 1.4.4.3.9.3 1.4 0 .4-.3.5-1.2 1-1.4.6-.3 1.4.2 2.1-.2.5-.4.7-1.1 1.2-1.5.6-.5 1.5-.6 2.3-.9.5-.3.7-.9.2-1.2-.8-.5-1.2-1.2-1.2-2.1V8.8c0-3.4-2.4-5.7-5.5-5.7Z" fill="#fff" stroke="#17131a" stroke-width="1.2"/>
+          <path d="M9.1 13.4c.7.5 1.5.7 2.9.7s2.2-.2 2.9-.7" fill="none" stroke="#17131a" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="info"><span class="platform">Snapchat</span><span class="handle">@haneen231560</span></span>
+      <span class="go">›</span>
+    </a>
+  </section>
+
+  <div class="footer">Stay Connected<span class="footer-heart">♥</span></div>
+</main>
+</body>
+</html>
